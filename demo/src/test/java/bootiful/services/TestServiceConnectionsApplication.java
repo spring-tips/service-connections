@@ -12,7 +12,8 @@ class TestServiceConnectionsApplication {
 
     public static void main(String[] args) {
         System.setProperty("spring.docker.compose.enabled", "false");
-        SpringApplication.from(ServiceConnectionsApplication::main)
+        SpringApplication
+                .from(ServiceConnectionsApplication::main)
                 .with(TestcontainersConfiguration.class).run(args);
     }
 
