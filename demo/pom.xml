@@ -11,21 +11,6 @@
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>21</java.version>
     </properties>
@@ -40,13 +25,15 @@
             <artifactId>rethinkdb-driver</artifactId>
             <version>2.4.4</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>autoconfigure</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-docker-compose</artifactId>
-<!--            <scope>runtime</scope>-->
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -57,7 +44,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-testcontainers</artifactId>
-<!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.testcontainers</groupId>
@@ -66,13 +52,5 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

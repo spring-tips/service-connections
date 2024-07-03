@@ -18,15 +18,6 @@ class TestServiceConnectionsApplication {
 
 }
 
-//@Import(TestcontainersConfiguration.class)
-//@SpringBootTest
-//class DemoApplicationTests {
-//
-//  @Test
-//  void contextLoads() {
-//  }
-//
-//}
 
 @TestConfiguration(proxyBeanMethods = false)
 class TestcontainersConfiguration {
