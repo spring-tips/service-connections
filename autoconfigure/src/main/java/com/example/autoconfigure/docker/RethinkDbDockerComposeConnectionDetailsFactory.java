@@ -1,6 +1,6 @@
-package bootiful.services.autoconfigure.docker;
+package com.example.autoconfigure.docker;
 
-import bootiful.services.autoconfigure.RethinkDbConnectionDetails;
+import com.example.autoconfigure.RethinkDbConnectionDetails;
 import org.springframework.boot.docker.compose.core.RunningService;
 import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
 import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
@@ -31,10 +31,11 @@ class RethinkDbDockerComposeConnectionDetailsFactory
 
     RethinkDbDockerComposeConnectionDetailsFactory() {
         super("rethinkdb", "com.rethinkdb.RethinkDB");
+        System.out.println("initializng " + getClass().getName() + '.');
     }
 
     @Override
     protected RethinkDbConnectionDetails getDockerComposeConnectionDetails(DockerComposeConnectionSource source) {
-        return new RethinkDbDockerComposeConnectionDetailsFactory.RethinkDbDockerComposeConnectionDetails(source.getRunningService());
+        return new RethinkDbDockerComposeConnectionDetails(source.getRunningService());
     }
 }

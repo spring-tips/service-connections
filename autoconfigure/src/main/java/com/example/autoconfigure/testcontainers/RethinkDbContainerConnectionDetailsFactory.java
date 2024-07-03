@@ -1,11 +1,10 @@
-package bootiful.services.autoconfigure.testcontainers;
+package com.example.autoconfigure.testcontainers;
 
-import bootiful.services.autoconfigure.RethinkDbConnectionDetails;
+import com.example.autoconfigure.RethinkDbConnectionDetails;
 import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
 import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
 import org.testcontainers.containers.Container;
 
-///
 class RethinkDbContainerConnectionDetailsFactory
         extends ContainerConnectionDetailsFactory<Container<?>, RethinkDbConnectionDetails> {
 
@@ -15,7 +14,7 @@ class RethinkDbContainerConnectionDetailsFactory
 
     @Override
     protected RethinkDbConnectionDetails getContainerConnectionDetails(ContainerConnectionSource<Container<?>> source) {
-        return new RethinkDbContainerConnectionDetailsFactory.RethinkDbContainerConnectionDetails(source);
+        return new RethinkDbContainerConnectionDetails(source);
     }
 
     static class RethinkDbContainerConnectionDetails

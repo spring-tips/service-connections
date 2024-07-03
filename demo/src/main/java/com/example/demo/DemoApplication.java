@@ -1,5 +1,4 @@
-package bootiful.services;
-
+package com.example.demo;
 
 import com.rethinkdb.RethinkDB;
 import com.rethinkdb.net.Connection;
@@ -11,10 +10,10 @@ import org.springframework.context.annotation.Bean;
 import java.util.Map;
 
 @SpringBootApplication
-public class ServiceConnectionsApplication {
+public class DemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceConnectionsApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
     @Bean
@@ -35,9 +34,10 @@ public class ServiceConnectionsApplication {
             rethinkDB.table(table).insert(rethinkDB.hashMap("name", "Star Trek TNG")).run(connection);
             var scifiResult = rethinkDB.table(table).run(connection);
             scifiResult.stream()
-                    .map( o -> (Map<?,?>)o )
-                    .map( m -> m.get("id") +"::"+ m.get("name"))
+                    .map(o -> (Map<?, ?>) o)
+                    .map(m -> m.get("id") + "::" + m.get("name"))
                     .forEach(System.out::println);
         };
     }
+
 }

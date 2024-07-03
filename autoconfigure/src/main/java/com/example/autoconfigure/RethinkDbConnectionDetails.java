@@ -1,4 +1,5 @@
-package bootiful.services.autoconfigure;
+package com.example.autoconfigure;
+
 
 import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
 

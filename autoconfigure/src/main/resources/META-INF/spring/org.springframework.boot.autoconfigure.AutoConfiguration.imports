@@ -1,1 +1,1 @@
-bootiful.services.autoconfigure.RethinkDbAutoConfiguration
+com.example.autoconfigure.RethinkDbAutoConfiguration
