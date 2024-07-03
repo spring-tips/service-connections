@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+  bootiful.services.autoconfigure.docker.RethinkDbDockerComposeConnectionDetailsFactory,\
+  bootiful.services.autoconfigure.testcontainers.RethinkDbContainerConnectionDetailsFactory,
