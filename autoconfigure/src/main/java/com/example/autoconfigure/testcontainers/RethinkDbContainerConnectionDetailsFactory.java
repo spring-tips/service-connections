@@ -6,7 +6,8 @@ import org.springframework.boot.testcontainers.service.connection.ContainerConne
 import org.testcontainers.containers.Container;
 
 class RethinkDbContainerConnectionDetailsFactory
-        extends ContainerConnectionDetailsFactory<Container<?>, RethinkDbConnectionDetails> {
+        extends ContainerConnectionDetailsFactory<Container<?>,
+        RethinkDbConnectionDetails> {
 
     public RethinkDbContainerConnectionDetailsFactory() {
         super("rethinkdb", "com.rethinkdb.RethinkDB");

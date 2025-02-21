@@ -21,7 +21,8 @@ class RethinkDbAutoConfiguration {
         return new RethinkDbPropertiesConnectionDetails(properties);
     }
 
-    static class RethinkDbPropertiesConnectionDetails implements RethinkDbConnectionDetails {
+    static class RethinkDbPropertiesConnectionDetails  
+            implements RethinkDbConnectionDetails {
 
         private final RethinkDbProperties rethinkDbProperties;
 

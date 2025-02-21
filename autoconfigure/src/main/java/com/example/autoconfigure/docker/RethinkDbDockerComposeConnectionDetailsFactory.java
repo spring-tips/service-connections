@@ -6,7 +6,7 @@ import org.springframework.boot.docker.compose.service.connection.DockerComposeC
 import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
 
 class RethinkDbDockerComposeConnectionDetailsFactory
-        extends DockerComposeConnectionDetailsFactory<RethinkDbConnectionDetails> {
+extends DockerComposeConnectionDetailsFactory<RethinkDbConnectionDetails> {
 
     static class RethinkDbDockerComposeConnectionDetails
             extends DockerComposeConnectionDetails implements RethinkDbConnectionDetails {
